@@ -1,0 +1,30 @@
+{% load static %}
+{% load tz %}
+
+<div class="graf_txt">
+    <p>Новости компании</p>
+</div>
+
+{% for entry in entry_list %}
+<article>
+    <div class="news">
+        <a href="{% url 'entry_detail_anal' entry.id %}">
+            <img src="{{ entry.image.url }}" class="image_on_news">
+        </a>
+        <div class="news_title">
+            <h3>
+                <a href="{% url 'entry_detail_anal' entry.id %}">
+                    {{ entry.title }}
+                </a>
+            </h3>
+        </div> 
+        <a href="{% url 'entry_detail_anal' entry.id %}">
+            <img src="{% static 'img/Vector.svg' %}" class="strelka">
+        </a>
+            
+        <h2 class="time_txt_novosti">
+            {{ entry.date_created|timezone:"Europe/Moscow"|date:'d.m.Y H:i' }}
+        </h2>
+    </div>
+</article>
+{% endfor %}

@@ -1,0 +1,70 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+</head>
+<body>
+    
+  <div class="cenhead">
+    <header>
+    <div class="logo">
+        <div class="stylehead">
+        <a href="/">
+        <img class="logotip" href="/" src="/static/img/logo_i_logo_n.png" width="200px"/>
+        </a>
+            <a href="/" class="nav_link">Новости</a>
+            <a href="{% url 'base_template' %}" class="nav_link">Биржевая аналитика</a>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="novosti">
+            <div class="novosti_txt">
+                <p>Новости</p>
+            </div>
+            
+            <div class="block_news">
+                
+
+{% block content %}{% endblock %}
+
+            </div>
+        </div>
+    </main>
+    <footer class="footer-distributed">
+        <img class="logo_footer" href="/" src="/static/img/logo_n.png" width="50px" />
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="/" class="link-1">Home</a>
+                
+                <a href="/">Blog</a>
+            
+                <a href="/static/html/about.html">About</a>
+                
+                <a href="/static/html/contact.html">Contact</a>
+
+                
+            </p>            
+        </div>
+
+        <div class="footer-center">
+            
+                <i class="fa fa-envelope"></i>
+                <p><a class="num_phone" href="mailto:support@news-astra.ru">support@news-astra.ru</a></p>
+            
+
+        </div>
+
+        <div class="footer-company-name">
+            <p>RuOSNews © 2024 Все права защищены</p>  
+        </div>
+
+    </footer>
+    </body>
+</html>

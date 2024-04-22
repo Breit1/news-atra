@@ -1,0 +1,40 @@
+
+{% extends "entries/base.html" %} <!-- Явно указываем на наш родительский шаблон. -->
+{% load static %}
+{% load tz %}
+
+{% block content %} <!-- Всё, что находится в этом блоке, может меняться дочерним шаблоном. -->
+ 
+   {% for entry in entry_list %}
+   
+</script>
+       <article>
+        <div class="news">
+            <a href="{% url 'entry-detail' entry.id %}">
+                <img  src="{{ entry.image.url }}" class="image_on_news">
+            </a>
+            <div class="news_title">
+                <h3>
+                    <a href="{% url 'entry-detail' entry.id %}">
+                        {{ entry.title }}
+                    </a>
+                </h3>
+            </div> 
+            <a href="{% url 'entry-detail' entry.id %}">
+                <img  src="{% static 'img/Vector.svg' %}" class="strelka">
+            </a>
+                
+            <h2 class="time_txt_novosti">
+                {{ entry.date_created|timezone:"Europe/Moscow"|date:'d.m.Y H:i' }}
+            </h2>
+            
+        </div>
+
+        
+       </article>
+
+   {% endfor %}
+{% endblock %} <!-- Не забываем закрыть блок дочернего шаблона. -->
+
+
+

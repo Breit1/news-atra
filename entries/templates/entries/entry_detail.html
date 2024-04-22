@@ -1,0 +1,15 @@
+{% extends "entries/base.html" %} 
+{% load tz custom_tags %}
+
+{% block content %} 
+   <article>
+       <div class="time_statei">
+            <h2>{{ entry.date_created|timezone:"Europe/Moscow"|date:'d.m.Y H:i' }}</h2>
+        </div>
+        <h1 class="name_statia">{{ entry.title }}</h1>
+        <img  src="{{ entry.image.url }}" class="image_on_statia">
+       
+        <p class="statia_txt">{{ entry.content|linebreaksbr|bold_stars|safe }}</p>
+
+   </article>
+{% endblock %}

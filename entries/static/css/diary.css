@@ -1,0 +1,314 @@
+/* laila-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Laila';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/laila-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* pt-sans-regular - cyrillic_cyrillic-ext_latin_latin-ext */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'PT Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-v17-cyrillic_cyrillic-ext_latin_latin-ext-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  
+  body {
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: PT Sans;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+  }
+   
+  .stylehead{
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: 2%;
+    background-color: #4C68AF;
+    color: #FFF;
+    padding: 1rem;
+  
+  }
+  
+  a {text-decoration: none; 
+    color: #000000; 
+    flex-wrap: wrap;
+    margin-left: 2%;
+    
+  }
+  a:hover {
+    color: #9f9f9f;
+  }
+  
+
+  
+  main {
+    padding: 2rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  code {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    font-family: PT Sans;
+    padding: 2px 4px;
+  }
+  
+  footer {
+    background-color: #e4e4e4;
+    color: rgb(90, 90, 90);
+    height: 230px;
+    text-align: center;
+
+    
+  }
+  
+  .footer_text{
+    flex-wrap: wrap;
+    line-height: 40px;
+  }
+
+  .nav_link{
+    color: #FFF;
+  }
+  
+  .novosti_txt{
+    color: #4C68AF;
+    font-family: PT Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: -20px;
+  }
+  
+  .block_news{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    min-height: 400px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 1.5rem;
+    justify-content: center;
+  }
+  
+  .news{
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-right: 10px;
+    align-items: center;
+    width: 280px;
+    height: 347px;
+    border: 1px solid rgb(79, 105, 170, 0.69) ;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    justify-content: center;
+
+  }
+
+  .text_news_zagolovok{
+    color: #000000;
+    font-family: PT Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+  
+  
+  .kr{
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    background-color: #4C68AF;
+    margin-top: 355px;
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  .oop{
+    width: 1000px;
+    height: 200px;
+    background-color: #4C68AF;
+  }
+  
+  .graf_txt{
+    color: #4C68AF;
+    font-family: PT Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+  }
+
+
+
+  .news_title{
+    position: absolute;
+    font-family: PT Sans;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: -15px;
+    margin-left: 18px;
+    text-indent: -5px;
+    max-width: 254px;
+    z-index: 1;
+  }
+  
+  .time_txt_novosti{
+  
+    color: #0000004D;
+    font-family: PT Sans;
+    height: 10px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-top: 50px;
+    margin-top: 130px;
+   
+  }
+
+  .image_on_news{
+    width: 254px;
+    height: 138px;
+    margin-left: 8px;
+    margin-top: 13px;
+  }
+
+  .image_on_statia{
+    display: block;
+    width: 100%;
+   
+    
+  }
+  
+  .strelka{
+    margin-left: 234px;
+    margin-bottom: -160px;
+  }
+
+  .name_statia{
+    font-size: 30px;
+    font-family: PT Sans;
+    font-weight: 700;
+
+  }
+
+  .statia_txt {
+    font-family: PT Sans;
+    letter-spacing: 0.5px;
+    line-height: 1.6em;
+    width: 961px; /* Ширина для экранов с шириной более 600px */
+}
+
+/* Медиа-запрос для экранов шириной менее 600px (например, телефонов) */
+@media only screen and (max-width: 960px) {
+    .statia_txt {
+        width: 100%; /* Ширина для экранов телефонов */
+    }
+    .name_statia{
+        width: 100%;
+        font-size: 20px;
+    }
+    .image_on_statia{
+        width: 100%;
+    }
+}
+
+  .footer-distributed{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #bfbfbf;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    height: auto; /* Заменяем фиксированную высоту на автоматическую */
+    text-align: left;
+    font: bold 16px open sans;
+    padding: 10px 20px;
+    
+  }
+
+  .logo_footer {
+    margin-right: auto;
+  }
+
+  .footer-left {
+    flex: 1;
+    width: 30%;
+    margin-right: auto;
+  }
+
+  .footer-center {
+    min-width: 100px; 
+    margin-right: auto; /* Используем auto для автоматического выравнивания по правому краю */
+    flex: 1;
+  }
+
+  .footer-center a{
+    color: rgb(90, 90, 90);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .footer-distributed {
+        flex-direction: column; /* Переключаемся на вертикальное расположение элементов */
+    }
+
+    .footer-center:last-child {
+        margin-top: 10px; /* Добавляем небольшое расстояние сверху для разделения блоков */
+    }
+  }
+
+  .footer-links {
+      margin: 0; /* Убираем отступы у списка ссылок */
+  }
+
+  .footer-links a { 
+      color: rgb(90, 90, 90); 
+      text-decoration: none;
+      margin-right: 10px; /* Добавляем небольшой отступ между ссылками */
+  }
+
+  .footer-links a:last-child {
+      margin-right: 0; /* Убираем отступ у последней ссылки */
+  }
+
+  .num_phone {
+      margin-left: 0%;
+  }
+
+
+  .time_statei{
+    font-size: 10px;
+    color: rgb(71, 71, 71);
+  }
+
+
+
+  #stock-iframe {
+    height: 305px;
+  }

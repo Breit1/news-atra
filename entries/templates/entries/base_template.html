@@ -1,0 +1,100 @@
+
+<!-- base_template.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биржевая аналитика</title>
+    <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+</head>
+<div class="cenhead">
+    <header>
+    <div class="logo">
+        <div class="stylehead">
+        <a href="/">
+        <img href="/" src="/static/img/logo.svg" width="200px"/>
+        </a>
+            <a href="/" class="nav_link">Новости</a>
+            <a href="{% url 'base_template' %}" class="nav_link">Биржевая аналитика</a>
+        </div>
+      <div class="graf_txt">
+        <p>График акций Астра (ASTR)</p>
+    </div>     
+    </div>
+    </header>
+<body>
+    <main>
+        <div id="iframe-container"></div>
+        {% include 'entries/stockanalytics.html' %}
+        {% block content %}{% endblock %}
+    </main>
+    
+
+    <footer class="footer-distributed">
+        <img class="logo_footer" href="/" src="/static/img/logo_n.png" width="50px" />
+        <div class="footer-left">
+      
+            <p class="footer-links">
+                <a href="/" class="link-1">Home</a>
+                
+                <a href="/">Blog</a>
+            
+                <a href="/static/html/about.html">About</a>
+                
+                <a href="/static/html/contact.html">Contact</a>
+      
+                
+            </p>            
+        </div>
+      
+        <div class="footer-center">
+            
+                <i class="fa fa-envelope"></i>
+                <p><a class="num_phone" href="mailto:support@news-astra.ru">support@news-astra.ru</a></p>
+            
+      
+        </div>
+      
+        <div class="footer-company-name">
+            <p>RuOSNews © 2024 Все права защищены</p>  
+        </div>
+      
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Функция для загрузки содержимого iframe
+            function loadIframeContent() {
+                // Проверяем, что iframe еще не загружен
+                if (!document.getElementById("stock-iframe")) {
+                    // Создаем iframe
+                    var iframe = document.createElement("iframe");
+                    iframe.setAttribute("id", "stock-iframe");
+                    iframe.setAttribute("src", "https://beststocks.ru/widget/ru:astr/quote-chart?id=ru:astr-frame-5878395096");
+                    iframe.style.width = "100%";
+                    iframe.style.minWidth = "320px";
+                    iframe.style.border = "none";
+                    
+        
+                    // Добавляем iframe в контейнер
+                    document.getElementById("iframe-container").appendChild(iframe);
+                }
+            }
+        
+            // Подгружаем содержимое iframe при загрузке страницы
+            loadIframeContent();
+        
+            // Добавляем обработчик события для подгрузки содержимого iframe при прокрутке страницы
+            window.addEventListener("scroll", function() {
+                // Проверяем, что страница была прокручена до конца
+                if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+                    loadIframeContent();
+                }
+            });
+        });
+        </script>
+</body>
+</html>
+
